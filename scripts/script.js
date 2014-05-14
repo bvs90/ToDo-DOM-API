@@ -10,16 +10,23 @@ var todoModule = (function(){
     items: document.querySelector('.todoModule .item-count'),
 
     addItem: function(){
-      var itemText = document.createTextNode(this.form.value);
-      var item = document.createElement('li');
-      item.appendChild(itemText);
-      this.list.appendChild(item);
-      this.form.value = '';
-      
-      var numItems = parseInt(this.items.innerHTML);
-      numItems++;
-      this.items.innerHTML = numItems;
-    }
+      if(this.form.value === ''){
+        alert('You must enter some text!');
+      }else {
+        var itemText = document.createTextNode(this.form.value);
+        var item = document.createElement('li');
+        item.appendChild(itemText);
+        this.list.appendChild(item);
+        this.form.value = '';
+        
+        var numItems = parseInt(this.items.innerHTML);
+        numItems++;
+        this.items.innerHTML = numItems;
+      }
+    },
+
+    
+    
   };
 
 }());
