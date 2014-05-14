@@ -4,7 +4,8 @@ var todoModule = (function(){
 
   /* public data / methods */
   return {
-    button: document.querySelector('.todoModule button'),
+    addButton: document.querySelector('.todoModule .add'),
+    clearButton: document.querySelector('.todoModule .clear'),
     form: document.querySelector('.todoModule input'),
     list: document.querySelector('.todoModule .list'),
     items: document.querySelector('.todoModule .item-count'),
@@ -25,13 +26,18 @@ var todoModule = (function(){
       }
     },
 
-    
-    
+    clearAll: function(){
+      while(this.list.firstChild){
+        this.list.removeChild(this.list.firstChild);
+      }
+    }
+
   };
 
 }());
 
 console.log(todoModule);
 
-todoModule.button.addEventListener('click', todoModule.addItem.bind(todoModule));
+todoModule.addButton.addEventListener('click', todoModule.addItem.bind(todoModule));
+todoModule.clearButton.addEventListener('click', todoModule.clearAll.bind(todoModule));
 
