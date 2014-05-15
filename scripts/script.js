@@ -1,8 +1,5 @@
 var todoModule = (function(){
-  /* private data / methods */
 
-
-  /* public data / methods */
   return {
     addButton: document.querySelector('.todoModule .add'),
     form: document.querySelector('.todoModule form'),
@@ -14,7 +11,7 @@ var todoModule = (function(){
 
     addItem: function(evt){
       evt.preventDefault();
-      
+
       if(this.input.value === ''){
         alert('You must enter some text!');
       }else {
