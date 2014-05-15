@@ -1,6 +1,7 @@
 /* Main stylesheet */
 .todoModule * {
   box-sizing: border-box;
+  color: #333;
 }
 .todoModule .wrapper {
   width: 40%;
@@ -18,7 +19,7 @@
 }
 .todoModule h1 {
   font-size: 1.5rem; 
-  margin-top: 1%;
+  margin-top: 5%;
 }
 .todoModule h2 {
   font-size: 1.3rem;
