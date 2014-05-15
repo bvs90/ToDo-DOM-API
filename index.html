@@ -7,26 +7,31 @@
   </head>
   <body class="todoModule">
     <div class="wrapper">
-      <h1>ToDo List - DOM API style</h1>
-      <h2>There are currently <span class="item-count">0</span> things to do!</h2>
-      <section class="form-container">
-        <form>
-          <div class="input-container">
-            <input type="text">
-            <span><button class="add">+</button></span>
-          </div>
-        </form>
-      </section>
+      <header>
+        <h1>ToDo List - DOM API style</h1>
+      </header>
+      
+      <div class="app-container">
+        <h2>There are currently <span class="item-count">0</span> things to do!</h2>
+        <section class="form-container">
+          <form>
+            <div class="input-container">
+              <input type="text">
+              <span><button class="add">+</button></span>
+            </div>
+          </form>
+        </section>
 
-      <section>
-        <h2>Things To Get Done</h2>
-        <ul class="list"></ul>
-      </section>
+        <section>
+          <h2>Things To Get Done</h2>
+          <ul class="list"></ul>
+        </section>
 
-      <section class="controls">
-        <button class="clear">Clear All</button>
-      </section>
-    </div>
+        <section class="controls">
+          <button class="clear">Clear All</button>
+        </section>
+      </div><!-- /app-container -->
+    </div><!-- /wrapper -->
     <!-- scripts -->
     <script src="scripts/script.js"></script>
   </body>
