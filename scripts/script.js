@@ -42,16 +42,19 @@ var todoModule = (function(){
     },
 
     checkItem: function(){
-      console.log(this.parentElement);
       var item = this.parentElement;
       if(this.checked === true){
         item.style.textDecoration="line-through";
+        var numItems = parseInt(todoModule.items.innerHTML);
+        numItems--;
+        todoModule.items.innerHTML = numItems;        
       }else{
         item.style.textDecoration="none";
+        var numItems = parseInt(todoModule.items.innerHTML);
+        numItems++;
+        todoModule.items.innerHTML = numItems;      
       }
     }
-
-
   };
 
 }());
