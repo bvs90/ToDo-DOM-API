@@ -59,8 +59,6 @@ var todoModule = (function(){
 
 }());
 
-console.log(todoModule);
-
 todoModule.form.addEventListener('submit', todoModule.addItem.bind(todoModule));
 todoModule.addButton.addEventListener('click', todoModule.addItem.bind(todoModule));
 todoModule.clearButton.addEventListener('click', todoModule.clearAll.bind(todoModule));
